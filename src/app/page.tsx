@@ -2,18 +2,13 @@
 
 export default function Home() {
   const handlePayPal = (plan: string) => {
-    // Redirect to PayPal checkout
-    const paypalUrls = {
-      weekly: 'https://www.paypal.com/checkoutnow?token=YOUR_WEEKLY_TOKEN',
-      monthly: 'https://www.paypal.com/checkoutnow?token=YOUR_MONTHLY_TOKEN',
-      lifetime: 'https://www.paypal.com/checkoutnow?token=YOUR_LIFETIME_TOKEN',
-    };
-    window.open(paypalUrls[plan as keyof typeof paypalUrls], '_blank');
+    // Placeholder - will be configured with actual PayPal links
+    alert('PayPal checkout coming soon! Join our Discord for manual purchases.');
   };
 
   const handleGiftCard = () => {
-    // Redirect to Discord for manual gift card verification
-    window.open('https://discord.gg/YOUR_DISCORD_INVITE', '_blank');
+    // Placeholder - will be configured with actual Discord invite
+    alert('Gift card purchases coming soon! Join our Discord for manual purchases.');
   };
 
   return (
