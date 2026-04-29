@@ -141,19 +141,19 @@ export default function Home() {
               name: 'Monthly',
               price: '$5',
               period: '/month',
-              description: 'Most popular choice',
+              description: 'Recurring subscription',
               features: ['Full Access', 'All Features', 'Priority Support', 'Monthly Updates'],
               plan: 'monthly',
-              popular: true,
+              popular: false,
             },
             {
               name: 'Lifetime',
               price: '$10',
               period: '/once',
-              description: 'Best value for long-term',
+              description: 'Most popular - best value',
               features: ['Full Access', 'All Features', 'Lifetime Updates', 'Priority Support', 'Exclusive Discord'],
               plan: 'lifetime',
-              popular: false,
+              popular: true,
             },
           ].map((plan, i) => (
             <div
