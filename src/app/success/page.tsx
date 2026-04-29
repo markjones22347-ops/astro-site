@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
-export default function SuccessPage() {
+function SuccessContent() {
   const searchParams = useSearchParams();
   const [loading, setLoading] = useState(true);
   const [email, setEmail] = useState('');
@@ -60,5 +61,13 @@ export default function SuccessPage() {
         </a>
       </div>
     </div>
+  );
+}
+
+export default function SuccessPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-gradient-to-b from-[#0a0a0f] via-[#0f0f1a] to-[#0a0a0f] flex items-center justify-center text-white">Loading...</div>}>
+      <SuccessContent />
+    </Suspense>
   );
 }
